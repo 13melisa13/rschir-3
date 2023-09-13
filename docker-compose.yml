@@ -9,9 +9,8 @@ services:
     restart: always
     volumes:
       - ./src:/var/www/html
-    networks:
-      - frontend
-      - backend
+    links:
+      - db
   db:
     build:
       './mysql/'
@@ -25,11 +24,7 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     volumes: 
       - "./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql"
-    networks:
-      - backend
+
 volumes:
   src:
   mysql:
-networks:
-  frontend:
-  backend:
