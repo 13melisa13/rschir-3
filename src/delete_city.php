@@ -8,7 +8,7 @@ if (isset($_POST["delete"]) && isset($_POST["cities"])) {
 
         if($result1 = mysqli_query($conn, $sql)){
 //        echo "Данные успешно добавлены";
-            header("Location: /index.php");
+            header("Location: /cities.php");
         } else{
             echo "Ошибка: " . $conn->error;
         }
@@ -19,13 +19,13 @@ if (isset($_POST["delete"]) && isset($_POST["cities"])) {
     $sql = "DELETE FROM city WHERE id = '$city'";
     if($result2 = mysqli_query($conn, $sql)){
 
-        header("Location: /index.php");
+        header("Location: /cities.php");
 //        echo "Данные успешно добавлены";
     } else {
         echo "Ошибка: " . $conn->error;
     }
 } else {
-    header("Location: /index.php");
+    header("Location: /cities.php");
 //    echo "Данные успешно добавлены";
 }
 

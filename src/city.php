@@ -1,10 +1,10 @@
 <html lang="en">
 <head>
 <title>CITY №<?php echo $_GET["id"];?></title>
-    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="stylesheet" href="static/style.css" type="text/css"/>
 </head>
 <body>
-<a href="index.php">Все города</a>
+<a href="cities.php">Все города</a>
 
 <?php
 

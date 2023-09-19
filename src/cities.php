@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
 <title>cities</title>
-    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="stylesheet" href="static/style.css" type="text/css"/>
 </head>
 <body>
 <a href="create_city.php">Создать город</a>

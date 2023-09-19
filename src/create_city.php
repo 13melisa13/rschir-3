@@ -6,7 +6,7 @@ if (isset($_POST["name"])) {
 
     if ($result = mysqli_query($conn, $sql)) {
 //        echo "Данные успешно добавлены";
-        header("Location: /index.php");
+        header("Location: /cities.php");
     }
     else {
         echo "Ошибка: " . $conn->error;
@@ -18,7 +18,7 @@ if (isset($_POST["name"])) {
 }?>    <html lang="ru">
 <head>
     <title>Create city</title>
-    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="stylesheet" href="static/style.css" type="text/css"/>
 </head>
 <body>
 <form method="post" >
@@ -27,6 +27,6 @@ if (isset($_POST["name"])) {
     <input type="submit" value="Создать">
 </form>
 
-<a href="index.php">Все города</a>
+<a href="cities.php">Все города</a>
 </body>
 </html>

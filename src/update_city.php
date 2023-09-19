@@ -11,7 +11,7 @@ if (isset($_POST["name"])) {
 //    echo $sql;
     if ($result = mysqli_query($conn, $sql)) {
 
-        header("Location: /index.php");
+        header("Location: /cities.php");
     } else {
         echo "Ошибка: " . $conn->error;
 
@@ -23,7 +23,7 @@ if (isset($_POST["name"])) {
 <html lang="en">
 <head>
     <title>UPD CITY №<?php echo $_GET["id"];?></title>
-    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="stylesheet" href="static/style.css" type="text/css"/>
 </head>
 <body>
 
@@ -52,7 +52,7 @@ else{
     ?>
 
 
-<a href="index.php">Все города</a>
+<a href="cities.php">Все города</a>
 
 </body>
 </html>
